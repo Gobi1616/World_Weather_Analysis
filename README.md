@@ -2,84 +2,58 @@
 
 ## Overview of the Project
 
-Basic Project Plan
+  Basic Project Plan:
+  
+  - Task: Collect and analyze weather data across cities worldwide.
+  - Purpose: PlanMyTrip will use the data to recommend ideal hotels based on clients’ weather preferences.
+  - Method: Create a Pandas DataFrame with 500 or more of the world’s unique cities and their weather data in real time. This process will entail collecting, analyzing, and visualizing the data.
 
-Here’s an outline of your project plan:
+## Analysis of the data will be split into three main parts, or stages.
 
-Task: Collect and analyze weather data across cities worldwide.
+## 1. Collect the Data
 
-Purpose: PlanMyTrip will use the data to recommend ideal hotels based on clients’ weather preferences.
+- Use the NumPy module to generate more than 2,000 random latitudes and longitudes.
+- Use the citipy module to list the nearest city to the latitudes and longitudes.
+- Use the OpenWeatherMap API to request the current weather data from each unique city in your list.
+- Parse the JSON data from the API request.
+- Collect the following data from the JSON file and add it to a DataFrame:
+    - City, country, and date
+    - Latitude and longitude
+    - Maximum temperature
+    - Humidity
+    - Cloudiness
+    - Wind speed
 
-Method: Create a Pandas DataFrame with 500 or more of the world’s unique cities and their weather data in real time. This process will entail collecting, analyzing, and visualizing the data.
+## 2. Exploratory Analysis with Visualization
 
-Your analysis of the data will be split into three main parts, or stages.
+- Create scatter plots of the weather data for the following comparisons:
+    - Latitude versus temperature
+    - Latitude versus humidity
+    - Latitude versus cloudiness
+    - Latitude versus wind speed
 
-## Collect the Data
+- Determine the correlations for the following weather data:
+    - Latitude and temperature
+    - Latitude and humidity
+    - Latitude and cloudiness
+    - Latitude and wind speed
 
-Use the NumPy module to generate more than 2,000 random latitudes and longitudes.
+- Create a series of heatmaps using the Google Maps and Places API that showcases the following:
+    - Latitude and temperature
+    - Latitude and humidity
+    - Latitude and cloudiness
+    - Latitude and wind speed
 
-Use the citipy module to list the nearest city to the latitudes and longitudes.
+## 3. Visualize Travel Data
 
-Use the OpenWeatherMap API to request the current weather data from each unique city in your list.
+- Create a heatmap with pop-up markers that can display information on specific cities based on a customer’s travel preferences. Complete these steps:
+    - Filter the Pandas DataFrame based on user inputs for a minimum and maximum temperature.
+    - Create a heatmap for the new DataFrame.
+    - Find a hotel from the cities’ coordinates using Google’s Maps and Places API, and Search Nearby feature. 
+    - Store the name of the first hotel in the DataFrame.
+    - Add pop-up markers to the heatmap that display information about the city, current maximum temperature, and a hotel in the city.
 
-Parse the JSON data from the API request.
-
-### Collect the following data from the JSON file and add it to a DataFrame:
-
-City, country, and date
-
-Latitude and longitude
-
-Maximum temperature
-
-Humidity
-
-Cloudiness
-
-Wind speed
-
-Exploratory Analysis with Visualization
-
-### Create scatter plots of the weather data for the following comparisons:
-
-Latitude versus temperature
-
-Latitude versus humidity
-
-Latitude versus cloudiness
-
-Latitude versus wind speed
-
-### Determine the correlations for the following weather data:
-
-Latitude and temperature
-
-Latitude and humidity
-
-Latitude and cloudiness
-
-Latitude and wind speed
-
-### Create a series of heatmaps using the Google Maps and Places API that showcases the following:
-
-Latitude and temperature
-
-Latitude and humidity
-
-Latitude and cloudiness
-
-Latitude and wind speed
-
-Visualize Travel Data
-
-### Create a heatmap with pop-up markers that can display information on specific cities based on a customer’s travel preferences. Complete these steps:
-
-Filter the Pandas DataFrame based on user inputs for a minimum and maximum temperature.
-Create a heatmap for the new DataFrame.
-Find a hotel from the cities’ coordinates using Google’s Maps and Places API, and Search Nearby feature.
-Store the name of the first hotel in the DataFrame.
-Add pop-up markers to the heatmap that display information about the city, current maximum temperature, and a hotel in the city.
-Challenge
+# Challenge
 
 ## Background
 
@@ -89,9 +63,9 @@ For the new modifications to the PlanMyTrip app, you are asked to add more data 
 
 The goals for this challenge are for you to:
 
-Use nested try-except blocks.
-Use Pandas methods and attributes on a DataFrame or Series.
-Create a new DataFrame from a new API search with new weather parameters.
-Filter DataFrames based on input and nested decision statements, and logical expressions.
-Create pop-up markers on a Google map from a filtered DataFrame.
-Add a directions layer on a Google map between cities in the filtered DataFrame.
+- Use nested try-except blocks.
+- Use Pandas methods and attributes on a DataFrame or Series.
+- Create a new DataFrame from a new API search with new weather parameters.
+- Filter DataFrames based on input and nested decision statements, and logical expressions.
+- Create pop-up markers on a Google map from a filtered DataFrame.
+- Add a directions layer on a Google map between cities in the filtered DataFrame.
